@@ -185,6 +185,15 @@
           }
         }
       },
+      "LanguageTranslator/1.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/Translator.dll": {}
+        }
+      },
       "MailKit/2.10.0": {
         "type": "package",
         "dependencies": {
@@ -2725,6 +2734,15 @@
           "lib/net45/Google.Apis.PeopleService.v1.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "LanguageTranslator/1.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/Translator.dll": {}
         }
       },
       "MailKit/2.10.0": {
@@ -5300,6 +5318,17 @@
         "lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
         "lib/netstandard2.0/Google.Apis.PeopleService.v1.pdb",
         "lib/netstandard2.0/Google.Apis.PeopleService.v1.xml"
+      ]
+    },
+    "LanguageTranslator/1.0.6": {
+      "sha512": "Cuxn8Yrhe7PLnwgwq/X0va+i/oTw6/6Yf5ZRvIm2tlaObJN5FL0Lt7j7HKBs+qixreRyotCkDOWdM3HdXRURAg==",
+      "type": "package",
+      "path": "languagetranslator/1.0.6",
+      "files": [
+        ".nupkg.metadata",
+        "languagetranslator.1.0.6.nupkg.sha512",
+        "languagetranslator.nuspec",
+        "lib/Translator.dll"
       ]
     },
     "MailKit/2.10.0": {
@@ -8745,6 +8774,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
+      "LanguageTranslator >= 1.0.6 <= 1.0.6",
       "UiPath.Excel.Activities >= 2.11.4 <= 2.11.4",
       "UiPath.Mail.Activities >= 1.12.3 <= 1.12.3",
       "UiPath.PDF.Activities >= 3.4.1 <= 3.4.1",
@@ -8760,13 +8790,18 @@
     "restore": {
       "projectUniqueName": "Plantilla Reframwork",
       "projectName": "Plantilla Reframwork",
-      "projectPath": "C:\\Users\\E76015068.ATENTO\\Downloads\\Plantilla Reframework\\Plantilla Reframework\\.local",
+      "projectPath": "C:\\Users\\E76015068.ATENTO\\Documents\\ProjectNew\\.local",
       "packagesPath": "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\E76015068.ATENTO\\Downloads\\Plantilla Reframework\\Plantilla Reframework\\.local"
+      "outputPath": "C:\\Users\\E76015068.ATENTO\\Documents\\ProjectNew\\.local"
     },
     "frameworks": {
       "net461": {
         "dependencies": {
+          "LanguageTranslator": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.6, 1.0.6]"
+          },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
