@@ -212,6 +212,16 @@
         "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\uipath.webapi.activities\\1.9.2\\lib/net461/UiPath.Web.dll"
       ],
       "Path": "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\uipath.webapi.activities\\1.9.2"
+    },
+    {
+      "Package": {
+        "Id": "LanguageTranslator",
+        "Version": "1.0.6"
+      },
+      "Assemblies": [
+        "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\languagetranslator\\1.0.6\\lib/Translator.dll"
+      ],
+      "Path": "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\languagetranslator\\1.0.6"
     }
   ],
   "Conflicts": [],
@@ -334,6 +344,11 @@
           "Item2": "[1.43.0, )"
         }
       ]
+    },
+    "LanguageTranslator": {
+      "Id": "LanguageTranslator",
+      "Version": "1.0.6",
+      "Dependencies": []
     },
     "MailKit": {
       "Id": "MailKit",
@@ -1549,6 +1564,16 @@
         "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876\\lib\\net45\\Google.Apis.PeopleService.v1.dll"
       ],
       "Path": "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876"
+    },
+    {
+      "Package": {
+        "Id": "LanguageTranslator",
+        "Version": "1.0.6"
+      },
+      "Assemblies": [
+        "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\languagetranslator\\1.0.6\\lib\\Translator.dll"
+      ],
+      "Path": "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\languagetranslator\\1.0.6"
     },
     {
       "Package": {

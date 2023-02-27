@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iaLUbvL/FW/IpRIf83xjKAOJLXH6udyIEuk1cTnei24F0iCMUyY7Gj5CxipDPQna9ULlpKMA3X4ddrP015Z0KA==",
+  "dgSpecHash": "zCOCfaYvjLEjn8Z0WPlztlGUU6T1KBZviz6EeEqVwPtl4yeJ2T31NcmzbJvfgz6L2FVnVjj1anHdeiRIQq2+jg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\E76015068.ATENTO\\Downloads\\Plantilla Reframework\\Plantilla Reframework\\.local\\",
+  "projectFilePath": "C:\\Users\\E76015068.ATENTO\\Documents\\ProjectNew\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
     "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\bitmiracle.docotic.pdf\\7.5.11645\\bitmiracle.docotic.pdf.7.5.11645.nupkg.sha512",
@@ -15,6 +15,7 @@
     "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\google.apis.core\\1.43.0\\google.apis.core.1.43.0.nupkg.sha512",
     "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\google.apis.gmail.v1\\1.43.0.1859\\google.apis.gmail.v1.1.43.0.1859.nupkg.sha512",
     "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876\\google.apis.peopleservice.v1.1.43.0.1876.nupkg.sha512",
+    "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\languagetranslator\\1.0.6\\languagetranslator.1.0.6.nupkg.sha512",
     "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\mailkit\\2.10.0\\mailkit.2.10.0.nupkg.sha512",
     "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
     "C:\\Users\\E76015068.ATENTO\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.6\\microsoft.aspnetcore.connections.abstractions.3.1.6.nupkg.sha512",
