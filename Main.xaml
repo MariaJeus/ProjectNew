@@ -38,7 +38,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -72,6 +72,7 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>Translator</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
@@ -310,41 +311,57 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Transition.To>
-              <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Lectura de información de excel de entrada &quot;Proyectos.xlsx&quot;." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="971,1736" sap2010:WorkflowViewState.IdRef="State_6">
+              <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Lectura de información de excel de entrada &quot;Proyectos.xlsx&quot;." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="1047,2045" sap2010:WorkflowViewState.IdRef="State_6">
                 <State.Entry>
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="925,1290" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1001,1599" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                     <TryCatch.Try>
-                      <Sequence sap:VirtualizedContainerService.HintSize="887,1062" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <Sequence sap:VirtualizedContainerService.HintSize="963,1371" sap2010:WorkflowViewState.IdRef="Sequence_17">
                         <Sequence.Variables>
-                          <Variable x:TypeArguments="x:String" Name="directorio">
-                            <Variable.Default>
-                              <Literal x:TypeArguments="x:String">proyectos.xlsx</Literal>
-                            </Variable.Default>
-                          </Variable>
+                          <Variable x:TypeArguments="x:String" Default="proyectos.xlsx" Name="directorio" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:PathExists DisplayName="Path Exists" Exists="[excelRuta]" sap:VirtualizedContainerService.HintSize="845,90" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[ruta+ directorio]" PathType="File" />
-                        <If Condition="[excelRuta]" sap:VirtualizedContainerService.HintSize="845,600" sap2010:WorkflowViewState.IdRef="If_6">
+                        <ui:PathExists DisplayName="Path Exists" Exists="[excelRuta]" sap:VirtualizedContainerService.HintSize="921,90" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[ruta+ directorio]" PathType="File" />
+                        <If Condition="[excelRuta]" sap:VirtualizedContainerService.HintSize="921,909" sap2010:WorkflowViewState.IdRef="If_6">
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="400,440" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,749" sap2010:WorkflowViewState.IdRef="Sequence_29">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,92" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Comienzo de lectura de archivo excel: proyectos.xlsx&quot;]" />
-                              <ui:ReadRange AddHeaders="True" DataTable="[dt_project]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="358,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Hoja1" WorkbookPath="[directorio]">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Comienzo de lectura de archivo excel: proyectos.xlsx&quot;]" />
+                              <ui:ReadRange AddHeaders="True" DataTable="[dt_project]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Hoja1" WorkbookPath="[directorio]">
                                 <ui:ReadRange.Range>
                                   <InArgument x:TypeArguments="x:String">
                                     <Literal x:TypeArguments="x:String" Value="" />
                                   </InArgument>
                                 </ui:ReadRange.Range>
                               </ui:ReadRange>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,92" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Fin de lectura de archivo excel: proyectos.xlsx&quot;]" />
+                              <Assign sap2010:Annotation.AnnotationText="Se valida que no haya proyectos repetidos." sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_66">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="sd:DataTable">[dt_project]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="sd:DataTable">[dt_project.AsEnumerable().GroupBy(Function(a) a.Field(Of String)("Project Name")).Select(Function(b) b.First).CopyToDataTable()]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <ui:WriteRange AddHeaders="True" DataTable="[dt_project]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Hoja1" WorkbookPath="[directorio]">
+                                <ui:WriteRange.StartingCell>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  </InArgument>
+                                </ui:WriteRange.StartingCell>
+                              </ui:WriteRange>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Fin de lectura de archivo excel: proyectos.xlsx&quot;]" />
                             </Sequence>
                           </If.Then>
                           <If.Else>
@@ -358,7 +375,7 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <Assign sap:VirtualizedContainerService.HintSize="845,82" sap2010:WorkflowViewState.IdRef="Assign_24">
+                        <Assign sap:VirtualizedContainerService.HintSize="921,82" sap2010:WorkflowViewState.IdRef="Assign_24">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[exitStatus]</OutArgument>
                           </Assign.To>
@@ -511,7 +528,7 @@
                                 <av:PointCollection x:Key="ConnectorLocation">190,77.6 190,107.6 188.84,107.6 188.84,127.6</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Se traduce la información de las columnas Type y Description, y se guarda cada uno de los proyectos con nombre  code_project.xlsx, en una carpeta con nombre: fecha de ejecución (formato dd_MM_yyyy) ." DisplayName="Bloque Actividad 1" sap:VirtualizedContainerService.HintSize="636,3055" sap2010:WorkflowViewState.IdRef="State_2">
+                            <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Se traduce la información de las columnas Type y Description, y se guarda cada uno de los proyectos con nombre  code_project.xlsx, en una carpeta con nombre: fecha de ejecución (formato dd_MM_yyyy) ." DisplayName="Bloque Actividad 1" sap:VirtualizedContainerService.HintSize="249,164" sap2010:WorkflowViewState.IdRef="State_2">
                               <State.Entry>
                                 <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="590,2625" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                                   <TryCatch.Try>
